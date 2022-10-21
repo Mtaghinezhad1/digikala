@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'vazir';
+  src: url('vazir.eot');
+  src: url('vazir.ttf')  format('truetype'),
+      url('vazir.woff2') format('woff2'),
+      url('vazir.woff') format('woff');
+}
+body {
+  margin: 0;
+  direction: rtl;
+  font-family: 'vazir';
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
