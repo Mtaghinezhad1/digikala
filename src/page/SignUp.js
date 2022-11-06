@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core'
 import React from 'react'
-import logo from "./../img/logo.svg"
+import logo from "./../asset/img/logo.svg";
 import { useState, useEffect } from 'react';
 import { NoEncryption } from '@material-ui/icons';
 

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'vazir';
-  src: url('vazir.eot');
-  src: url('vazir.ttf')  format('truetype'),
-      url('vazir.woff2') format('woff2'),
-      url('vazir.woff') format('woff');
+  src: url('./../font/vazir.eot');
+  src: url('./../font/vazir.ttf')  format('truetype'),
+      url('./../font/vazir.woff2') format('woff2'),
+      url('./../font/vazir.woff') format('woff');
 }
 body {
   margin: 0;

@@ -5,8 +5,7 @@ import SideMenu from './SideMenu';
 import { useContext } from 'react';
 import { AppContext } from '../../context/ContextProvider';
 import { Link } from 'react-router-dom';
-
-import logo from "./../../img/logo.svg";
+import logo from "./../../asset/img/logo.svg";
 
 
 const useStyles = makeStyles((theme) => ({

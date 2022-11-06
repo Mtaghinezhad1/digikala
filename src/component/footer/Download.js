@@ -1,10 +1,10 @@
 import { Button, Typography, makeStyles, Hidden } from '@material-ui/core';
 import React from 'react';
-import more from "./../../img/More.svg";
-import bazzar from "./../../img/coffe-bazzar.svg";
-import googlePlay from "./../../img/google-play.svg";
-import myket from "./../../img/myket.svg";
-import sib from "./../../img/sib-app.svg";
+import more from "./../../asset/img/More.svg";
+import bazzar from "./../../asset/img/coffe-bazzar.svg";
+import googlePlay from "./../../asset/img/google-play.svg";
+import myket from "./../../asset/img/myket.svg";
+import sib from "./../../asset/img/sib-app.svg";
 
 
 const useStyles = makeStyles((theme) => ({

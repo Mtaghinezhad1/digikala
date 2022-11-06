@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Button } from '@material-ui/core';
 import { ExpandLess } from '@material-ui/icons';
 import React from 'react';
-import logo from "./../../img/logo.svg";
+import logo from "./../../asset/img/logo.svg";
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({

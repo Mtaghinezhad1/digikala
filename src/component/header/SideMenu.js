@@ -2,13 +2,13 @@ import React from "react";
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import logo from "./../../img/logo.svg"
+import logo from "./../../asset/img/logo.svg"
 import Drawer from '@material-ui/core/Drawer';
 import MailIcon from '@material-ui/icons/Mail';
 import { useContext } from "react";
 import { AppContext } from "../../context/ContextProvider";
 import { makeStyles, Accordion, AccordionSummary, AccordionDetails, Typography } from "@material-ui/core";
-import { ArrowDownward, ArrowDownwardRounded, ExpandMore } from "@material-ui/icons";
+import { ExpandMore } from "@material-ui/icons";
 import menuItems from "./../../data provider/menuItems";
 
 const useStyles = makeStyles((theme) => ({

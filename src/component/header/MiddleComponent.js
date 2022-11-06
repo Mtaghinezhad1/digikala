@@ -1,7 +1,7 @@
 import { makeStyles, InputBase, Button, Typography, Badge } from '@material-ui/core';
 import { Input, LocalGroceryStoreOutlined, Search } from '@material-ui/icons';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "./../../img/logo.svg";
+import logo from "./../../asset/img/logo.svg";
 import React from 'react';
 import BadgeComponent from './BadgeComponent';
 
