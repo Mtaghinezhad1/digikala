@@ -30,7 +30,7 @@ const BadgeComponent = () => {
 
 
   return (
-        <Badge onClick={()=>navigate("/sabadekharid")} className={classes.badgeIcon} badgeContent={count} color="secondary">
+        <Badge onClick={()=>navigate("/sabadekharid")} className={classes.badgeIcon} overlap="rectangular" badgeContent={count} color="secondary">
           <LocalGroceryStoreOutlined />
         </Badge>
   )
