@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import { useContext } from 'react';
-import { AppContext } from '../../context/ContextProvider';
-import { ArrowLeft, Close, LocationCity } from '@material-ui/icons';
+import { ArrowLeft, Close, LocationCity, LocationOnOutlined, ChevronLeftOutlined } from '@material-ui/icons';
+
 import cities from '../../data provider/cities';
 
 
@@ -25,6 +24,29 @@ const useStyles = makeStyles((theme) => ({
       left: "50%",
       transform: "translate( -50% , -50%)",
     }
+  },
+  locationContainerFlex: {
+    [theme.breakpoints.up('md')]: {
+      width: "20%",
+      justifyContent: 'flex-end',
+    },
+    '&:hover': {
+      cursor: 'pointer',
+    },
+    width: "100%",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+
+  },
+  locationTextContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  locationText: {
+    fontSize: 14,
+    margin: 0,
   },
   locationContainer: {
     overflowY: 'scroll',
@@ -76,16 +98,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SimpleModal() {
+export default function Location({ children }) {
   const classes = useStyles();
-  const { isOpenModal, closeModal } = useContext(AppContext);
+  const [openModal ,setOpenModal] = useState(false);
 
 
   const body = (
     <div className={classes.paper}>
       <div className={classes.titleRow}>
         <p className={classes.title}>انتخاب شهر</p>
-        <Close className={classes.closeIcon} onClick={closeModal} />
+        <Close className={classes.closeIcon} onClick={()=>setOpenModal(false)} />
       </div>
       <div className={classes.locationContainer}>
         <div className={classes.locationRow}>
@@ -94,7 +116,7 @@ export default function SimpleModal() {
         </div>
 
         {
-          cities.map((city,index) => {
+          cities.map((city, index) => {
             return (
               <div className={classes.cityRow} key={index}>
                 <p className={classes.title}>{city}</p>
@@ -109,16 +131,27 @@ export default function SimpleModal() {
   );
 
   return (
-    <div>
-      <Modal
-        open={isOpenModal}
-        onClose={closeModal}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      >
+    <>
+      <div onClick={()=>setOpenModal(true)} className={classes.locationContainerFlex} >
+        <div className={classes.locationTextContainer}>
+          <LocationOnOutlined />
+          <p className={classes.locationText}>
+            لطفا شهر خود را وارد کنید
+          </p>
+        </div>
+        <ChevronLeftOutlined />
+      </div>
+      <div>
+        <Modal
+          open={openModal}
+          onClose={()=>setOpenModal(false)}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          {body}
+        </Modal>
+      </div>
+    </>
 
-        {body}
-      </Modal>
-    </div>
   );
 }
